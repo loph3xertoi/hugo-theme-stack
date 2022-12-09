@@ -1,3 +1,7 @@
+<head>
+  {{ template "_internal/google_analytics_async.html" . }}
+  {{ template "_internal/google_analytics.html" . }}
+</head>
 <header class="article-header">
     {{- $image := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
     {{ if $image.exists }}
